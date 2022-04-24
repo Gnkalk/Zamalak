@@ -2,6 +2,8 @@
 
 Zamalak is small, fast and simple Time Tools
 
+**Tip:** Click on Logo to Chenge Tool
+
 ### ScreenShot 🖼
 
 ![ScreenShot](./ScreenShot.png)
