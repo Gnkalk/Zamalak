@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #27c09a;
+    --secondary-color: #36d1aa;
+    --bg-secondary-color: #bfe3e7;
+}
+
+#timeEl {
+    width: 250px;
+    text-align: center;
+}
+
+#Chenge {
+    cursor: pointer;
+}
+
+#timeBtn {
+    margin-top: 1rem;
+}
+
+input[type="number"] {
+    width: 33%;
+    min-width: 0;
+    --color:var(--primary-color);
+    position:relative;
+    -webkit-appearance:none;
+    border:1px solid #757575;
+    border-radius:5px;
+    min-width:250px;
+    padding:7.5px;
+    font-size:16px;
+    overflow:hidden;
+    margin-right:5px;
+    cursor:pointer;
+    transition:.15s;
+}
+
+input[type="number"]:focus {
+    outline:none;
+    box-shadow:0 0 2.5px var(--color);
+}
