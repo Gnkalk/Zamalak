@@ -32,21 +32,15 @@ function Timer() {
     const timeInputM = document.getElementById("timeInputM");
     const timeInputH = document.getElementById("timeInputH");
     timeBtn.addEventListener("click", () => {
-        let h = timeInputH.value;
-        let m = timeInputM.value;
-        let s = timeInputS.value;
-        let Ftime = h * 3600 + m * 60 + s;
-        const timer = setInterval(() => {
+        let Ftime = (timeInputH.value * 3600) + (timeInputM.value * 60) + (timeInputS.value * 1);
+        TimeText = setInterval(() => {
             Ftime--;
-            let h = Math.floor(Ftime / 3600);
-            let m = Math.floor((Ftime % 3600) / 60);
-            let s = Ftime % 60;
-            let Dh = Intl.NumberFormat('fa-IR').format(h);
-            let Dm = Intl.NumberFormat('fa-IR').format(m);
-            let Ds = Intl.NumberFormat('fa-IR').format(s);
-            document.getElementById("Time").innerHTML = `<h3>${Dh}:${Dm}:${Ds}</h3>`;
+            let h = Intl.NumberFormat('fa-IR').format(Math.floor(Ftime / 3600));
+            let m = Intl.NumberFormat('fa-IR').format(Math.floor((Ftime % 3600) / 60));
+            let s = Intl.NumberFormat('fa-IR').format(Math.floor(Ftime % 60));
+            document.getElementById("Time").innerHTML = `<h3>${h}:${m}:${s}</h3>`;
             if (Ftime == 0) {
-                clearInterval(timer);
+                ClearTime();
                 document.getElementById("Time").innerHTML = `<h3>پایان!</h3>`;
             }
         }, 1000);
